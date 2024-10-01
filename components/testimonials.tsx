@@ -4,7 +4,6 @@ import { useState } from "react";
 
 // Define your categories with their respective iframe sources
 const categories = [
-  // { id: 1, name: "Heart", iframeSrc: "https://testweb.hologo.world/embed/524b901b-f1d7-4b5b-8eba-71f1f55b6282" },
   { id: 1, name: "Animal Cells", iframeSrc: "https://testweb.hologo.world/embed/524b901b-f1d7-4b5b-8eba-71f1f55b6282" },
   { id: 2, name: "Teeth", iframeSrc: "https://testweb.hologo.world/embed/f1e6f0ec-b084-4731-9997-b076f9724770" },
 ];
@@ -13,7 +12,7 @@ export default function ExperienceViewer() {
   const [activeCategory, setActiveCategory] = useState<number>(1);
 
   return (
-    <div className="w-full h-screen mx-auto px-4 sm:px-6">
+    <div className="w-full mx-auto px-4 sm:px-6">
       <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.400/.25),transparent)1] md:py-20">
         {/* Section header */}
         <div className="mx-auto max-w-3xl pb-12 text-center">
@@ -63,20 +62,20 @@ export default function ExperienceViewer() {
           </div>
         </div>
 
-        {/* Responsive Iframe Viewport */}
-        <div className="relative w-full h-full">
+        {/* Fixed Size Iframe */}
+        <div className="relative mx-auto" style={{ width: "800px", height: "450px" }}>
           {categories.map(
             (category) =>
               activeCategory === category.id && (
                 <iframe
                   key={category.id}
                   src={category.iframeSrc}
-                  className="absolute top-0 left-0 w-full h-full"
+                  className="absolute top-0 left-0"
                   title={`${category.name} Experience`}
                   frameBorder="0"
                   allowFullScreen
-                  height="100%"
-                  width="100%"
+                  width="800"
+                  height="450"
                 />
               )
           )}
