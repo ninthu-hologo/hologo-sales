@@ -75,6 +75,8 @@ export default function ExperienceViewer() {
                   title={`${category.name} Experience`}
                   frameBorder="0"
                   allowFullScreen
+                  height="100%"
+                  width="100%"
                 />
               )
           )}
