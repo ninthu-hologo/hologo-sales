@@ -63,7 +63,7 @@ export default function ExperienceViewer() {
         </div>
 
         {/* Fixed Size Iframe */}
-        <div className="relative mx-auto" style={{ width: "800px", height: "450px" }}>
+        <div className="relative mx-auto" style={{ width: "1200px", height: "675px" }}>
           {categories.map(
             (category) =>
               activeCategory === category.id && (
@@ -74,8 +74,8 @@ export default function ExperienceViewer() {
                   title={`${category.name} Experience`}
                   frameBorder="0"
                   allowFullScreen
-                  width="800"
-                  height="450"
+                  width="1200"
+                  height="700"
                 />
               )
           )}
