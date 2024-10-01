@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Home - Open PRO",
-  description: "Page description",
+  title: "Hologo World",
+  description: "3D demos",
 };
 
 import PageIllustration from "@/components/page-illustration";
