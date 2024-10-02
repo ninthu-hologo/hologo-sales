@@ -63,7 +63,8 @@ export default function ExperienceViewer() {
         </div>
 
         {/* Responsive Iframe */}
-        <div className="relative w-full h-0 pb-[56.25%] md:pb-[56.25%] lg:pb-[56.25%] sm:pb-[177.78%]"> {/* 16:9 on larger screens, 9:16 on mobile */}
+        <div className="relative w-full h-0 pb-[56.25%] md:pb-[56.25%]">
+          {/* 16:9 for larger screens */}
           {categories.map(
             (category) =>
               activeCategory === category.id && (
@@ -78,6 +79,15 @@ export default function ExperienceViewer() {
               )
           )}
         </div>
+
+        {/* CSS Media Query for 9:16 aspect ratio for mobile */}
+        <style jsx>{`
+          @media (max-width: 767px) {
+            .relative.w-full.h-0 {
+              padding-bottom: 177.78%; /* 9:16 aspect ratio */
+            }
+          }
+        `}</style>
       </div>
     </div>
   );
