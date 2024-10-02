@@ -62,20 +62,18 @@ export default function ExperienceViewer() {
           </div>
         </div>
 
-        {/* Fixed Size Iframe */}
-        <div className="relative mx-auto" style={{ width: "1200px", height: "675px" }}>
+        {/* Responsive Iframe */}
+        <div className="relative w-full h-0 pb-[56.25%]"> {/* 16:9 aspect ratio */}
           {categories.map(
             (category) =>
               activeCategory === category.id && (
                 <iframe
                   key={category.id}
                   src={category.iframeSrc}
-                  className="absolute top-0 left-0"
+                  className="absolute top-0 left-0 w-full h-full"
                   title={`${category.name} Experience`}
                   frameBorder="0"
                   allowFullScreen
-                  width="1200"
-                  height="700"
                 />
               )
           )}
