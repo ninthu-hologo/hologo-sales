@@ -4,8 +4,18 @@ import { useState } from "react";
 
 // Define your categories with their respective iframe sources
 const categories = [
-  { id: 1, name: "Animal Cells", iframeSrc: "https://testweb.hologo.world/embed/524b901b-f1d7-4b5b-8eba-71f1f55b6282" },
-  { id: 2, name: "Teeth", iframeSrc: "https://testweb.hologo.world/embed/f1e6f0ec-b084-4731-9997-b076f9724770" },
+  {
+    id: 1,
+    name: "Animal Cells",
+    iframeSrc:
+      "https://testweb.hologo.world/embed/524b901b-f1d7-4b5b-8eba-71f1f55b6282",
+  },
+  {
+    id: 2,
+    name: "Teeth",
+    iframeSrc:
+      "https://testweb.hologo.world/embed/f1e6f0ec-b084-4731-9997-b076f9724770",
+  },
 ];
 
 export default function ExperienceViewer() {
@@ -13,29 +23,32 @@ export default function ExperienceViewer() {
 
   return (
     <div className="w-full mx-auto px-4 sm:px-6">
-      <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.400/.25),transparent)1] md:py-20">
+      <div className="m-auto w-[85%] md:w-[70%] rounded-xl py-12 md:py-32 bg-gradient-to-r from-[#a8bfee] to-[#fd9f7f]">
         {/* Section header */}
-        <div className="mx-auto max-w-3xl pb-12 text-center">
-          <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
-            Don't take our word for it
+        <div className="mx-auto max-w-3xl pb-12 text-center ">
+          <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.red.500),theme(colors.indigo.500),theme(colors.red.500),theme(colors.indigo.500),theme(colors.red.500))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+            Trailblazing Interactive Education.
           </h2>
-          <p className="text-lg text-indigo-200/65">
-            We provide tech-first solutions that empower decision-makers to
-            build healthier and happier workspaces from anywhere in the world.
+          <p className="text-lg text-[#1b2124] mt-6 px-6 md:px-12">
+            We are a digital education resource with 1000+ 3D, Augmented
+            Reality, and Virtual Reality educational experiences. Use Hologo in
+            your school and have students learn what we do by recreating our
+            experiences.
           </p>
         </div>
       </div>
+
       <div className="py-12">
         {/* Category Buttons */}
         <div className="flex justify-center pb-12 md:pb-16">
-          <div className="relative inline-flex flex-wrap justify-center rounded-[1.25rem] bg-gray-800/40 p-1">
+          <div className="relative inline-flex flex-wrap justify-center rounded-[1.25rem] bg-[#797b7a] p-1">
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-200 ${
                   activeCategory === category.id
-                    ? "relative bg-gradient-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.indigo.500/0),theme(colors.indigo.500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]"
+                    ? "relative bg-gradient-to-b from-[#363939] via-[#1f2223] to-[#363939] before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.indigo.500/0),theme(colors.indigo.500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]"
                     : "opacity-65 transition-opacity hover:opacity-90"
                 }`}
               >

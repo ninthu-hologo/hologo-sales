@@ -1,0 +1,57 @@
+ /* Note to yourself - Remove this file later this is only to save the color codes from the image sent */
+.primary-colors-violet {
+    --primary: #9e1a60;
+    --secondary: #b02652;
+    --last: #b02652;
+ }
+ #a02161
+.primary-colors-red {
+    --primary: #c43542;
+    --secondary: #dd462c;
+    --last: #eb501d;
+}
+
+.neutral {
+    --primary: #1f2223;
+    --secondary: #363939;
+    --tertiary: #57595a;
+    --quaternary: #797a7b;
+    --quinary: #797a7b;
+    --senary: #b1b2b2;
+    --septenary: #d2d3d3;
+    --octonary: #efefef;
+    --nonary: #;
+    /* --denary: */
+}
+
+.blue-violet-accent {
+    --primary: #6382c2;
+    --secondary: #829fda;
+    --tertiary: #a8bfee;
+}
+
+.green-accent {
+    --primary: #7cceb7;
+    --secondary: #9be3cf;
+    --tertiary: #c5f4e7;
+}
+
+.red-accent {
+    --primary: #eb501d;
+    --secondary: #f47b52;
+    --tertiary: #fd9f7f;
+}
+
+.yellow-accent {
+    --primary: #f9d262;
+    --secondary: #ffe8b2;
+    --tertiary: #fff8ef;
+}
+
+.misc {
+    --blue: #aad9f5;
+    --pink: #f89eb7;
+    --yellow: #fbd290;
+    --dark-blue: #9eabd7;
+    --green: #b5dfd1;
+}
