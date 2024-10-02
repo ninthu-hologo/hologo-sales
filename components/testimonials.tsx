@@ -27,7 +27,7 @@ export default function ExperienceViewer() {
       </div>
       <div className="py-12">
         {/* Category Buttons */}
-        <div className="flex justify-center pb-12 max-md:hidden md:pb-16">
+        <div className="flex justify-center pb-12 md:pb-16">
           <div className="relative inline-flex flex-wrap justify-center rounded-[1.25rem] bg-gray-800/40 p-1">
             {categories.map((category) => (
               <button
