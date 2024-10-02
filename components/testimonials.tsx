@@ -63,7 +63,7 @@ export default function ExperienceViewer() {
         </div>
 
         {/* Responsive Iframe */}
-        <div className="relative w-full h-0 pb-[56.25%]"> {/* 16:9 aspect ratio */}
+        <div className="relative w-full h-0 pb-[56.25%] md:pb-[56.25%] lg:pb-[56.25%] sm:pb-[177.78%]"> {/* 16:9 on larger screens, 9:16 on mobile */}
           {categories.map(
             (category) =>
               activeCategory === category.id && (
